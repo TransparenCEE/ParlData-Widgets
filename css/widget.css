@@ -6,7 +6,6 @@
     width: 100%;
     max-width: 470px;
     overflow-x: hidden;
-    overflow-y: auto;
     position: relative;
 }
 
@@ -41,12 +40,17 @@
 }
 
 .parldata-widget .visengard-widget-link-block p, pre {
-    padding: 20px 10px 0;
+    padding: 15px 10px 5px;
+    margin: 0;
+    font-size: 12px;
 }
 
+.parldata-widget .visengard-widget-link-block p:first-of-type {
+    padding-top: 30px;
+}
 .parldata-widget .visengard-widget-link-block pre {
     background: #fefefe;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .parldata-widget .visengard-widget-person,
@@ -54,6 +58,8 @@
 .parldata-widget .visengard-widget-list {
     width: 100%;
     float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top,
@@ -128,7 +134,7 @@
 }
 
 .parldata-widget .visengard-widget-list .visengard-widget-list-top h4 {
-    padding: 4% 4% 0;
+    padding: 25px 4% 0;
     margin: 0;
 }
 
@@ -284,7 +290,7 @@
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-bottom,
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom {
-    padding: 0 4% 25px;
+    padding: 0 4% 5px;
     display: inline-block;
 }
 
