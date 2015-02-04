@@ -204,7 +204,27 @@ textarea {
     }
 }
 
-.parldata-widget {
+.blockOne, .blockTwo, .blockThree, .blockFour {
     float: left;
     margin: 10px;
+}
+
+.blockOne {
+    width: 200px;
+}
+
+.blockTwo {
+    width: 250px;
+}
+
+.blockThree {
+    width: 270px;
+}
+
+.blockFour {
+    width: 320px;
+}
+
+.parldata-widget {
+    float: left;
 }

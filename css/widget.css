@@ -1,22 +1,52 @@
 .parldata-widget {
-    min-width: 200px;
-    max-width: 470px;
-    height: 335px;
-    border: 1px solid #dedede;
     background-color: #ffffff;
+    border: 1px solid #dedede;
+    height: 335px;
+    min-width: 200px;
+    width: 100%;
+    max-width: 470px;
     overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
 }
 
-.parldata-widget .visengard-widget-back-to-begin {
+.parldata-widget .visengard-widget-back-to-begin,
+.parldata-widget .visengard-widget-link {
     position: absolute;
-    z-index: 1;
-    top: 10px;
-    right: 10px;
+    z-index: 2;
+    top: 5px;
     display: block;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU5RTlCODUxQUJCRTExRTRCNTM4OUFDNTY0Q0JFQUVCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU5RTlCODUyQUJCRTExRTRCNTM4OUFDNTY0Q0JFQUVCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTlFOUI4NEZBQkJFMTFFNEI1Mzg5QUM1NjRDQkVBRUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTlFOUI4NTBBQkJFMTFFNEI1Mzg5QUM1NjRDQkVBRUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6PaJnXAAABhklEQVR42rSWzytEURTH3zy/QzQbYqUZWbBjIWZjbWlDkYXsxcZKSUryL1jIWrKi1GyUUkoWiiLkx0ykBpvxa57v1VG327k/Xt059VnM6Z7zmXvvmXkvEdijEgyCXpAG1eAJnIIjcOPSwBbNIAV6QBeoIkkR3LtIRAxr8qLpMjgEbyBS+CHBBpiwSUpgTvpcC5ZAjmlsIguGdJIiLRoFDeAgZnMZseMZTvJICwp0xpEHFlRJzlNjlbF/QYIkrZZ7O6YzvwAfoIVGegTUaGryoB/c2nZyCcZBUtOoD+wZ6tdBKN+J09kyUQ82NfVizDvFomeD5BVMOYjEVJ5oeswHjpe4So1MIb7MF1O7Ly5+ls78mymM6K9HCNbAg0FSB85Ah5I/D2JE6LBmh9lJPowhKTms4XZaEUfiEikm9+lT0gS6mXzBp2QStDH5a1+CAfCiGf9pX5IVjUD80Nt9SRrBFiNZ9DxYf8/+bUlw53MX6ovJLj0hM0EZI628MwRhGSTv4EpO/AowAApqzKQzazyjAAAAAElFTkSuQmCC') center center no-repeat;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+}
+.parldata-widget .visengard-widget-back-to-begin {
+    right: 10px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0NjVGQjg0QUM4NzExRTRBQTQxODkxMzBDREI4NEQ2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ0NjVGQjg1QUM4NzExRTRBQTQxODkxMzBDREI4NEQ2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDQ2NUZCODJBQzg3MTFFNEFBNDE4OTEzMENEQjg0RDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDQ2NUZCODNBQzg3MTFFNEFBNDE4OTEzMENEQjg0RDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7l2n6vAAACD0lEQVR42mL8//8/A7mAiYECgFPzHwaGx4+f/v35lWTNPxkYCqftm1mawvTnJmman/1kSK1bvrw5m+nbA0ZWFjya0eWOP/lZU9d1b89CEUFWTm4BBjYOYm1eeeZ1WlrevZ3ThYU5GZjYf/35x/D9Ox7NjJCo+sfAMHHTzRntlUxvzvPwCfxnYvnz9584B4Ohka6qlp6ykryWkqKYmhEWzW//M9RP3LFxcpUQx2dWTgEGBpBxjAwMv/8zfP/2/efPn39+fteS4gv3d05ITmKWRBjB+PTH/7iyGTeW14uJ8zNz8GNPM4yMH77++vXhjbOmWHd7hYhZOMSxxCWS//8FuVmFJKV23frcUt30+/FeQs5mZPz6+9+nt+9YGH+zsbGxc3CwsrL9ZWT++OptZZBaev9yBmZhnAH24+cfJwW2kIK859+lb1y/cfrUucf3Lv789vXjt18GXJ8WzasXtcgEuggBVpx+peOZpiAlaWygo6ap1xdt8f//c4jUhy8/Lz56Udq9VMvGX5iFb2dH5P//P4Ga/yLrP/b4h1Nik4KssrqmRnOYxf+fl/+jgiN3P2kHNFX76/z/eY/h39/faNLA8I+tXSYsoVHrq/H/58X/GODU5/91pZVfrh8Gav6DKf3j//+cqXurwz3+fTn7Hxu4cuPdi0eXGP7jAED3PHr05M+PL7gU/Pv/n3HAShKAAAMA8n2j2RREmCMAAAAASUVORK5CYII=') center center no-repeat;
+}
+
+.parldata-widget .visengard-widget-link {
+    right: 40px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3RjIzQ0QwQUM4NzExRTRBNDMyRDE1NzNGQTFBOTcxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ3RjIzQ0QxQUM4NzExRTRBNDMyRDE1NzNGQTFBOTcxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDdGMjNDQ0VBQzg3MTFFNEE0MzJEMTU3M0ZBMUE5NzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDdGMjNDQ0ZBQzg3MTFFNEE0MzJEMTU3M0ZBMUE5NzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5yEc79AAACzElEQVR42mL8//8/A17w5ubp8/df/2ZgldQ0NZQXQJH7jw/8vLy2yUlPQURIWEBQSNHApXvrTWRpPJp/n1hSbqUkJiKp4JteWZHmpyYtJK5u07rhEmHNZ5ZUWSmJ8vAJW8Y2X/n6//+nM42RZmJCAqKajm0w/Vg1/7qwvMpGQ05IVNI0suHcK6jo32cnaoONRPm5JHSDll54j1XzjzPLK23UZMSl5ewTmi+9RZV8f6Ej0UaSWyqyfesPTM33dk9wUuHjFRCziWu68AEk8ufT28+/4fLfN7WHyfMIBddu+Iqu+fejyYm2gvwybhmdp1+CBF7d3pMbYBdcsgjigqsry01kuQRkHXr3P8Rw9pdLNb46TJLm7bvAWv//OzM3V0lIUFxWM6J+9ct//78/PJzuouVWMPv9PywB9mlVpZ8kN7+Gfezik+CA+vZmXXOippggj4BsVNvGj0CB1/effP6DFtr/nt64BnTbt0sb461lBfgF1ZwTV5x/A5Z6taIm1kCaX0DLb+WlT1gSyZP9k1y1NTImHwWG4etLq2LsNcVEBFUdc4++Abvv/8uJCeYinDoV6y5haP5yuyHUmJedxyio/NIXsOsvLAqys8uZsOf5dxD33PrOQGMZfmnbCYceoWv+c3Wdn76QqEn4uqvf/v+DSnx99/YnmHFpVZO9shgXJ59t2oQ73/6ja/57b2ukmZSgknXjmov/UAPw2vpmRy05UXEZk5DKU09/oCUKsLP/vl9eHSQvyCWpaFS59MQvmNyFtQ0OapISknI2UVWnX/3CTMbQAPv3+VJfqqOssICEqlntijN///+/sqbZVlGYj0/UIqLq5GvsmQcpnt9f6oqzERcQUrH2K6quDDZR4BMQMwwuP/b0N66ch5pIPt6ckO6iICooKCgkJK7glNB09vlPPGUFI3ox9O/9paOnHn/8xcIjZmBhLs6Br4QCCDAAl4YqwVal6MkAAAAASUVORK5CYII=') center center no-repeat;
+}
+
+.parldata-widget .visengard-widget-link-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.parldata-widget .visengard-widget-link-block p, pre {
+    padding: 20px 10px 0;
+}
+
+.parldata-widget .visengard-widget-link-block pre {
+    background: #fefefe;
+    padding-top: 15px;
 }
 
 .parldata-widget .visengard-widget-person,
@@ -27,9 +57,13 @@
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top,
-.parldata-widget .visengard-widget-organization .visengard-widget-organization-top,
+.parldata-widget .visengard-widget-organization .visengard-widget-organization-top {
+    padding: 25px 4% 0;
+    display: inline-block;
+}
+
 .parldata-widget .visengard-widget-list .visengard-widget-list-top {
-    padding: 4% 4% 0;
+    width: 100%;
     display: inline-block;
 }
 
@@ -39,8 +73,7 @@
     display: block;
 }
 
-.parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-image,
-.parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members-item-image {
+.parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-image {
     width: 126px;
     height: 126px;
     border: 3px solid #cfcfcf;
@@ -71,8 +104,7 @@
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-image img,
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members-item-image img {
-    width: 130px;
-    margin: -2px;
+    width: 100%
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic,
@@ -81,24 +113,50 @@
     padding-left: 150px;
 }
 
+.parldata-widget.wider .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic,
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic.withLogo {
+    width: 100%;
+    padding-left: 0;
+}
+
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic h4,
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic h4,
-.parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic > div,
-.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 {
+.parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic > div {
     float: left;
     width: 100%;
 }
 
+.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 {
+    padding: 4% 4% 0;
+    margin: 0;
+}
+
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic h4,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic h4,
-.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 {
+.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 a {
     color: #003e84;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     line-height: 1em;
     font-weight: bold;
+}
+
+.parldata-widget.wider .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic h4,
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic h4,
+.parldata-widget.wider .visengard-widget-list .visengard-widget-list-top h4 a {
+    padding-left: 2px;
+    padding-right: 12px;
+    width: auto;
+}
+
+.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    outline: none;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div,
@@ -113,10 +171,22 @@
     position: relative;
 }
 
-.parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members,
+.parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members {
+    width: 40%;
+}
+
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members-men,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members-women {
-    width: 33%;
+    width: 30%;
+}
+
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members {
+    width: 90%;
+}
+
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members-men,
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-members-women {
+    width: 45%;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div > .icon,
@@ -163,6 +233,19 @@
     float: left;
     margin: 0;
     padding: 0 0 0 42px;
+    line-height: 1em;
+}
+
+.parldata-widget.wide .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div > small,
+.parldata-widget.wide .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div > p,
+.parldata-widget.wide .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic > div > small,
+.parldata-widget.wide .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic > div > p {
+    padding-left: 34px;
+}
+
+.parldata-widget.wide .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div > small,
+.parldata-widget.wide .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic > div > small {
+    width: auto
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-top .visengard-widget-person-top-basic > div > small,
@@ -170,6 +253,11 @@
     color: #9f9f9f;
     font-size: 11px;
     margin-bottom: 2px;
+}
+
+.parldata-widget.wider .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-contact {
+    width: auto;
+    max-width: 95%;
 }
 
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top .visengard-widget-organization-top-basic .visengard-widget-organization-top-basic-contact .icon {
@@ -190,12 +278,13 @@
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item a {
     color: #4c6ba8;
     text-decoration: none;
+    outline: none;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-bottom,
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom {
-    padding: 0 4% 4%;
+    padding: 0 4% 25px;
     display: inline-block;
 }
 
@@ -226,11 +315,13 @@
     font-weight: bold;
     float: left;
     width: 100%;
+    outline: none;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom a,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-bottom a {
     text-decoration: none;
+    outline: none;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom > ul {
@@ -241,6 +332,7 @@
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom > ul > li > a {
     margin: 0 0 6px;
+    outline: none;
 }
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom .visengard-widget-person-bottom-members.arrowDown:after {
@@ -257,11 +349,18 @@
 
 .parldata-widget .visengard-widget-person .visengard-widget-person-bottom .visengard-widget-person-bottom-members-list > li > a {
     font-weight: normal;
+    outline: none;
 }
 
-.parldata-widget .visengard-widget-list .visengard-widget-list-top h4,
+.parldata-widget .visengard-widget-list .visengard-widget-list-top h4 a,
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item a {
     text-align: center;
+    outline: none;
+    line-height: 1em;
+}
+
+.parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item a {
+    font-size: 16px;
 }
 
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members {
@@ -273,10 +372,26 @@
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item {
     float: left;
     width: 33%;
+    height: 180px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .parldata-widget .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item .visengard-widget-list-bottom-members-item-image {
+    width: 105px;
+    height: 105px;
+    border: 3px solid #cfcfcf;
+    -moz-border-radius: 126px;
+    -webkit-border-radius: 126px;
+    border-radius: 126px;
+    overflow: hidden;
     margin: 0 auto;
+}
+
+.parldata-widget.wide .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item {
+    width: 50%;
+}
+
+.parldata-widget.wider .visengard-widget-list .visengard-widget-list-bottom .visengard-widget-list-bottom-members .visengard-widget-list-bottom-members-item {
+    width: 95%;
 }
