@@ -62,6 +62,17 @@
     overflow-y: auto;
 }
 
+.parldata-widget .visengard-widget-person .visegrad-widget-error,
+.parldata-widget .visengard-widget-organization .visegrad-widget-error,
+.parldata-widget .visengard-widget-list .visegrad-widget-error {
+    font-size: 12px;
+    left: 0;
+    padding: 0 10%;
+    position: relative;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+
 .parldata-widget .visengard-widget-person .visengard-widget-person-top,
 .parldata-widget .visengard-widget-organization .visengard-widget-organization-top {
     padding: 25px 4% 0;
