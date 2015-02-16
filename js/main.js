@@ -6,7 +6,7 @@ $(document).ready(function () {
         url: 'http://api.parldata.eu/',
         dataType: 'json',
         success: function (data) {
-            $.each(data.links.child, function (key, item) {
+            $.each(data._links.child, function (key, item) {
                 loadWidget[item.href] = false;
 
                 $('body').append(
@@ -21,7 +21,7 @@ $(document).ready(function () {
                     success: function (data) {
                         var parlList = $('<div></div>').addClass('list');
 
-                        $.each(data.links.child, function (key, list) {
+                        $.each(data._links.child, function (key, list) {
                             parlList.append(
                                 $('<h2></h2>').text(list.title)
                             ).append(
