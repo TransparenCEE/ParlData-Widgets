@@ -3,7 +3,7 @@ $(document).ready(function () {
         loadWidgetInterval;
 
     $.ajax({
-        url: 'http://api.parldata.eu',
+        url: 'http://api.parldata.eu/',
         dataType: 'json',
         complete: function (data) {
             data = [
@@ -32,7 +32,7 @@ $(document).ready(function () {
                 );
 
                 $.ajax({
-                    url: 'http://api.parldata.eu/' + item.href,
+                    url: 'http://api.parldata.eu/' + item.href + '/',
                     dataType: 'json',
                     complete: function (data) {
                         data = [
