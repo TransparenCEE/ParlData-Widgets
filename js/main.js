@@ -5,24 +5,8 @@ $(document).ready(function () {
     $.ajax({
         url: 'http://api.parldata.eu/',
         dataType: 'json',
-        complete: function (data) {
-            data = [
-                {
-                    href: 'sk',
-                    title: 'Slovakia'
-                },
-                {
-                    href: 'cz',
-                    title: 'Czech republic'
-                },
-                {
-                    href: 'pl',
-                    title: 'Poland'
-                }
-
-            ];
-
-            $.each(data, function (key, item) {
+        success: function (data) {
+            $.each(data.links.child, function (key, item) {
                 loadWidget[item.href] = false;
 
                 $('body').append(
@@ -34,21 +18,10 @@ $(document).ready(function () {
                 $.ajax({
                     url: 'http://api.parldata.eu/' + item.href + '/',
                     dataType: 'json',
-                    complete: function (data) {
-                        data = [
-                            {
-                                href: 'sejm',
-                                title: 'Sejm Rzeczypospolitej Polskiej'
-                            },
-                            {
-                                href: 'senat',
-                                title: 'Senat Rzeczypospolitej Polskiej'
-                            }
-                        ];
-
+                    success: function (data) {
                         var parlList = $('<div></div>').addClass('list');
 
-                        $.each(data, function (key, list) {
+                        $.each(data.links.child, function (key, list) {
                             parlList.append(
                                 $('<h2></h2>').text(list.title)
                             ).append(
