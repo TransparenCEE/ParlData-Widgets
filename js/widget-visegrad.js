@@ -40,8 +40,12 @@ WebFontConfig = {
                 'contactDetail': 'contact address',
                 'membersList': 'List of members',
                 'linkGenerator': 'Copy below code to generate widget at selected view',
-                'errorMsg': 'Request didn\'t found any data with this ID. Please make sure that ID is correct.'
+                'errorMsg': 'Request didn\'t found any data with this ID. Please make sure that ID is correct.',
+                'emptyMsg': 'Request didn\'t found any data or they are empty.'
             }
+        },
+        reload: function () {
+            return main();
         }
     };
 
@@ -609,14 +613,40 @@ WebFontConfig = {
                 });
             }
         } else {
-            generateErrorLog(el, 'visengard-widget-list');
+            $.ajax({
+                url: json_url + '/' + country + '/organizations/?where={"classification":"chamber","dissolution_date": {"$exists": false}}',
+                dataType: 'json',
+                success: function (data) {
+                    if (typeof(data._items[0]) == "undefined") {
+                        generateEmptyList(el, 'visengard-widget-list');
+                    } else {
+                        el.attr('data-id', data._items[0].id);
+                        jsonDataOrganizationMembers(el);
+                    }
+                },
+                error: function () {
+                    generateErrorLog(el, 'visengard-widget-list');
+                }
+            });
         }
     }
 
     function generateErrorLog(el, type) {
         var lang = el.attr('data-language') || 'en';
-        el.find('.' + type).append(
+        el.find('.' + type).html(
             $('<div></div>').addClass('visegrad-widget-error').text(visegrad.lang[lang].errorMsg)
+        );
+        el.find('.visengard-widget-wrapper > div').css('height', el.height());
+        el.find('.visengard-widget-wrapper').animate({
+            'margin-left': (type == 'visengard-widget-person') ? 0 : ((type == 'visengard-widget-organization') ? -el.width() + 'px' : -(el.width() * 2) + 'px')
+        });
+        el.find('.' + type + ' .visegrad-widget-error').css('height', 'auto');
+    }
+
+    function generateEmptyList(el, type) {
+        var lang = el.attr('data-language') || 'en';
+        el.find('.' + type).html(
+            $('<div></div>').addClass('visegrad-widget-error').text(visegrad.lang[lang].emptyMsg)
         );
         el.find('.visengard-widget-wrapper > div').css('height', el.height());
         el.find('.visengard-widget-wrapper').animate({
