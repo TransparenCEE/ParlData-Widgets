@@ -398,6 +398,7 @@ WebFontConfig = {
     function generateListTemplate(el, data) {
         var lang = el.attr('data-language') || 'en';
 
+        if (data.memberships) {
         var listBlock = $('<div></div>').addClass('visengard-widget-list').css('width', el.width()).append(
             $('<div></div>').addClass('visengard-widget-list-top').append(
                 $('<h4></h4>').append(
@@ -484,6 +485,9 @@ WebFontConfig = {
             'margin-left': -(el.width() * 2) + 'px'
         });
         listBlock.css('height', 'auto');
+        } else {
+            jsonDataOrganization(el)
+        }
     }
 
     function jsonDataPerson(el) {
