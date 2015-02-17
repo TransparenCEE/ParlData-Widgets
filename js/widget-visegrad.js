@@ -159,7 +159,7 @@ WebFontConfig = {
         if (data.birth_date)
             personalBlock.find('.visengard-widget-person-top-basic').append(
                 $('<div></div>').addClass('visengard-widget-person-top-basic-birthday').append(
-                    $('<span></span>').addClass('icon gender ' + (((data.gender == 'male') || (data.gender == 'female')) ? data.gender : 'other'))
+                    $('<span></span>').addClass('icon gender ' + (typeof(data.gender) !== 'undefined') ? data.gender : ''))
                 ).append(
                     $('<small></small>').text(visegrad.lang[lang].born)
                 ).append(
