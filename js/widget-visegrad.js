@@ -499,7 +499,7 @@ WebFontConfig = {
             if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.data[country].person[id]) !== "undefined" && visegrad.data[country].person[id] !== null) {
                 generatePersonTemplate(el, visegrad.data[country].person[id])
             } else {
-                if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.cache[country].person[id]) !== "undefined" && visegrad.cache[country].person[id] != null)
+                if (typeof(visegrad.cache[country]) !== "undefined" && typeof(visegrad.cache[country].person[id]) !== "undefined" && visegrad.cache[country].person[id] != null)
                     generatePersonTemplate(el, visegrad.cache[country].person[id]);
 
                 $.ajax({
@@ -534,7 +534,7 @@ WebFontConfig = {
             if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.data[country].organization[id]) !== "undefined" && visegrad.data[country].organization[id] !== null) {
                 generateOrganizationTemplate(el, visegrad.data[country].organization[id]);
             } else {
-                if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.cache[country].organization[id]) !== "undefined" && visegrad.cache[country].organization[id] != null)
+                if (typeof(visegrad.cache[country]) !== "undefined" && typeof(visegrad.cache[country].organization[id]) !== "undefined" && visegrad.cache[country].organization[id] != null)
                     generateOrganizationTemplate(el, visegrad.cache[country].organization[id]);
 
                 $.ajax({
@@ -582,7 +582,7 @@ WebFontConfig = {
             if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.data[country].organization[id]) !== "undefined" && visegrad.data[country].organization[id] !== null) {
                 generateListTemplate(el, visegrad.data[country].organization[id]);
             } else {
-                if (typeof(visegrad.data[country]) !== "undefined" && typeof(visegrad.cache[country].organization[id]) !== "undefined" && visegrad.cache[country].organization[id] != null)
+                if (typeof(visegrad.cache[country]) !== "undefined" && typeof(visegrad.cache[country].organization[id]) !== "undefined" && visegrad.cache[country].organization[id] != null)
                     generateListTemplate(el, visegrad.cache[country].organization[id]);
 
                 $.ajax({
