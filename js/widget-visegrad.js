@@ -218,11 +218,16 @@ WebFontConfig = {
                 $('<ul></ul>').addClass('visengard-widget-person-bottom-members-list').append(function () {
                     var list = $(this);
                     $.each(data.memberships, function (key, value) {
+                        var label = value.organization.name; 
+                        if (value.label) {
+                            label = label + ' as ' + value.label;
+                        }
+                        
                         $('<li></li>').append(
                             $('<a></a>').attr({
                                 'href': value.organization.id,
                                 'target': '_blank'
-                            }).text(value.organization.name + ' as ' + value.label).click(function (e) {
+                            }).text(label).click(function (e) {
                                 e.preventDefault();
                                 if (el.attr('data-back') == null)
                                     el.attr('data-back', el.attr('data-id'));
