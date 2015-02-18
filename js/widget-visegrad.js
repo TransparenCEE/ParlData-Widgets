@@ -138,7 +138,7 @@ WebFontConfig = {
                             $('<p></p>').text(visegrad.lang[lang].linkGenerator)
                         ).append(
                             $('<p></p>').html('<strong>HEAD</strong>')
-                        ).append(`
+                        ).append(
                             $('<pre></pre>').text('<script type="text/javascript" src="https://epforgpl.github.io/ParlData-Widgets/js/widget-visegrad.js"></script>')
                                 .click(function () {
                                     $(this).select();
