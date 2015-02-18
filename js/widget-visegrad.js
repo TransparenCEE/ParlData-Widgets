@@ -4,7 +4,7 @@ WebFontConfig = {
     google: {families: ['Open+Sans:400,700:cyrillic-ext,latin']}
 };
 
-(function () {
+(function ($) {
     /******* Google Font Open Sans *******/
     var wf = document.createElement('script');
     wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
@@ -752,4 +752,4 @@ WebFontConfig = {
     }
 
 })
-(); // We call our anonymous function immediately
+(jQuery); // We call our anonymous function immediately
