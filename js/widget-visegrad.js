@@ -146,7 +146,7 @@ WebFontConfig = {
                         ).append(
                             $('<p></p>').html('<strong>BODY</strong>')
                         ).append(
-                            $('<pre></pre>').text('<div class="parldata-widget" data-country="' + el.attr('data-country') + '" data-parliament="' + el.attr('data-parliament') + '" data-context="personal" data-id="' + data.id + '"></div>')
+                            $('<pre></pre>').text('<div class="parldata-widget" data-country="' + el.attr('data-country') + '" data-parliament="' + el.attr('data-parliament') + '" data-context="person" data-id="' + data.id + '"></div>')
                                 .click(function () {
                                     $(this).select();
                                 })
