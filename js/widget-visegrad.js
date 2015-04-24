@@ -752,4 +752,4 @@ WebFontConfig = {
     }
 
 })
-(jQuery); // We call our anonymous function immediately
+(window.jQuery); // We call our anonymous function immediately
