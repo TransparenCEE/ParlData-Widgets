@@ -4,7 +4,7 @@ WebFontConfig = {
     google: {families: ['Open+Sans:400,700:cyrillic-ext,latin']}
 };
 
-(function ($) {
+(function () {
     /******* Google Font Open Sans *******/
     var wf = document.createElement('script');
     wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
@@ -21,7 +21,7 @@ WebFontConfig = {
     cssList.parentNode.insertBefore(css, cssList);
 
     /******* Core Object *******/
-    var jQuery;
+    var $;
     visegrad = {
         'storage': false,
         'json_url': 'http://api.parldata.eu',
@@ -68,15 +68,15 @@ WebFontConfig = {
         (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
     } else {
         // The jQuery version on the window is the one we want to use
-        jQuery = window.jQuery;
+        $ = window.jQuery;
         main();
     }
 
     /******** Called once jQuery has loaded ******/
     function scriptLoadHandler() {
         // Restore $ and window.jQuery to their previous values and store the
-        // new jQuery in our local jQuery variable
-        jQuery = window.jQuery.noConflict(true);
+        // new jQuery in our local $ variable
+        $ = window.jQuery.noConflict(true);
         // Call our main function
         main();
     }
@@ -85,7 +85,7 @@ WebFontConfig = {
     function resize() {
         setTimeout(function () {
             $('.parldata-widget').each(function () {
-                var el = $(this),
+                var el = jQuery(this),
                     wrapper = el.find('.visengard-widget-wrapper'),
                     elWidth = el.width();
 
@@ -723,7 +723,7 @@ WebFontConfig = {
                 visegrad.cache = JSON.parse(localStorage.getItem('visegradWidgetData'));
         }
 
-        jQuery(document).ready(function ($) {
+        $(document).ready(function ($) {
             visegrad.widgets = $(document).find('.parldata-widget');
 
             $.each(visegrad.widgets, function () {
@@ -752,4 +752,4 @@ WebFontConfig = {
     }
 
 })
-(window.jQuery); // We call our anonymous function immediately
+(); // We call our anonymous function immediately
